@@ -13,7 +13,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative bg-orange-50 min-h-screen flex items-center">
+    <div className="relative bg-orange-50 min-h-screen flex items-center" id="home">
       <div className="absolute inset-0">
         <img
           src="https://i.ibb.co/tQLJB5P/Highlights-from-our-cookie-biscuit-class-so-many-memories-and-sweetness-Delicious-and-crunchy-biscui.jpg?auto=format&fit=crop&q=80"
