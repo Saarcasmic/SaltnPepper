@@ -41,7 +41,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                <p className="mt-1 text-gray-600">+1 (555) 123-4567</p>
+                <p className="mt-1 text-gray-600">+91 74098 68983</p>
                 <p className="text-gray-600">Mon-Fri from 8am to 6pm</p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                <p className="mt-1 text-gray-600">info@saltandpepper.com</p>
+                <p className="mt-1 text-gray-600">saltandpepperclasses@gmail.com</p>
                 <p className="text-gray-600">We'll respond within 24 hours</p>
               </div>
             </div>
@@ -63,8 +63,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-gray-900">Location</h3>
-                <p className="mt-1 text-gray-600">123 Cooking Street</p>
-                <p className="text-gray-600">New York, NY 10001</p>
+                <p className="mt-1 text-gray-600">1/21, Radhapuram Estate</p>
+                <p className="text-gray-600">Mathura, U.P</p>
               </div>
             </div>
           </div>
