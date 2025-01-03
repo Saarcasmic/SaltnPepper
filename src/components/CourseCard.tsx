@@ -37,7 +37,7 @@ export default function CourseCard({
           </div>
         </div>
         <div className="mt-6 flex items-center justify-between">
-          <span className="text-2xl font-bold text-gray-900">${price}</span>
+          <span className="text-2xl font-bold text-gray-900">₹{price}</span>
           <PaymentButton courseId={id} price={price} />
         </div>
       </div>

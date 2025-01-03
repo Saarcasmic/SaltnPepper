@@ -33,7 +33,7 @@ export default function PaymentButton({ courseId, price, className = '' }: Payme
           try {
             const data = await verifyPayment(response);
             if (data.verified) {
-              window.location.href = `/payment/success?course=${courseId}`;
+              window.location.href = `/payment/success?status=success&course=${courseId}`;
             } else {
               alert('Payment verification failed. Please contact support.');
             }

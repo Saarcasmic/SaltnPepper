@@ -18,6 +18,9 @@ export const courses = [
     category: 'Baking & Confectionary',
     price: 150,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: true
+    
   },
   {
     id: 2,
@@ -27,7 +30,9 @@ export const courses = [
     duration: '3 hours',
     category: 'Baking & Confectionary',
     price: 120,
-    spots: 8,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 3,
@@ -37,7 +42,9 @@ export const courses = [
     duration: '6 hours',
     category: 'Baking & Confectionary',
     price: 200,
-    spots: 6,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 17,
@@ -47,7 +54,9 @@ export const courses = [
     duration: '3 hours',
     category: 'Baking & Confectionary',
     price: 130,
-    spots: 12,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 18,
@@ -58,6 +67,8 @@ export const courses = [
     category: 'Baking & Confectionary',
     price: 150,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 19,
@@ -67,7 +78,9 @@ export const courses = [
     duration: '3 hours',
     category: 'Baking & Confectionary',
     price: 140,
-    spots: 8,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 20,
@@ -78,6 +91,8 @@ export const courses = [
     category: 'Baking & Confectionary',
     price: 120,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 21,
@@ -87,7 +102,9 @@ export const courses = [
     duration: '3 hours',
     category: 'Baking & Confectionary',
     price: 110,
-    spots: 12,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 22,
@@ -97,7 +114,9 @@ export const courses = [
     duration: '4 hours',
     category: 'Baking & Confectionary',
     price: 160,
-    spots: 8,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   // Regional and International Cuisines
   {
@@ -108,7 +127,9 @@ export const courses = [
     duration: '5 hours',
     category: 'Regional and International Cuisines',
     price: 180,
-    spots: 8,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 5,
@@ -119,6 +140,8 @@ export const courses = [
     category: 'Regional and International Cuisines',
     price: 150,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   {
     id: 6,
@@ -128,7 +151,9 @@ export const courses = [
     duration: '4 hours',
     category: 'Regional and International Cuisines',
     price: 170,
-    spots: 8,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 23,
@@ -139,6 +164,8 @@ export const courses = [
     category: 'Regional and International Cuisines',
     price: 160,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   // Quick Bites and Beverages
   {
@@ -149,7 +176,9 @@ export const courses = [
     duration: '2 hours',
     category: 'Quick Bites and Beverages',
     price: 90,
-    spots: 12,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 8,
@@ -159,7 +188,9 @@ export const courses = [
     duration: '2 hours',
     category: 'Quick Bites and Beverages',
     price: 100,
-    spots: 15,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 9,
@@ -169,7 +200,9 @@ export const courses = [
     duration: '2 hours',
     category: 'Quick Bites and Beverages',
     price: 80,
-    spots: 15,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   {
     id: 24,
@@ -179,7 +212,9 @@ export const courses = [
     duration: '2 hours',
     category: 'Quick Bites and Beverages',
     price: 90,
-    spots: 12,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   {
     id: 25,
@@ -189,7 +224,9 @@ export const courses = [
     duration: '2 hours',
     category: 'Quick Bites and Beverages',
     price: 100,
-    spots: 12,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   // Desserts and Sweet Treats
   {
@@ -201,6 +238,8 @@ export const courses = [
     category: 'Desserts and Sweet Treats',
     price: 140,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   {
     id: 11,
@@ -210,7 +249,9 @@ export const courses = [
     duration: '4 hours',
     category: 'Desserts and Sweet Treats',
     price: 160,
-    spots: 8,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 26,
@@ -221,6 +262,8 @@ export const courses = [
     category: 'Desserts and Sweet Treats',
     price: 150,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   // Snacks and Essentials
   {
@@ -232,6 +275,8 @@ export const courses = [
     category: 'Snacks and Essentials',
     price: 120,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   {
     id: 13,
@@ -242,6 +287,8 @@ export const courses = [
     category: 'Snacks and Essentials',
     price: 130,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   {
     id: 14,
@@ -252,6 +299,8 @@ export const courses = [
     category: 'Snacks and Essentials',
     price: 110,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 27,
@@ -262,6 +311,8 @@ export const courses = [
     category: 'Snacks and Essentials',
     price: 120,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 28,
@@ -271,7 +322,9 @@ export const courses = [
     duration: '2 hours',
     category: 'Snacks and Essentials',
     price: 100,
-    spots: 12,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
   {
     id: 29,
@@ -282,6 +335,8 @@ export const courses = [
     category: 'Snacks and Essentials',
     price: 110,
     spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
 
   // Specialty Courses
@@ -293,7 +348,9 @@ export const courses = [
     duration: '2 hours',
     category: 'Specialty Courses',
     price: 100,
-    spots: 15,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false 
   },
   {
     id: 16,
@@ -303,6 +360,8 @@ export const courses = [
     duration: '4 hours',
     category: 'Specialty Courses',
     price: 180,
-    spots: 8,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
   },
 ];

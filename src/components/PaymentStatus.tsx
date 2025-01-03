@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 export default function PaymentStatus() {
   const [searchParams] = useSearchParams();
   const status = searchParams.get('status');
-  const courseId = searchParams.get('course');
+  // const courseId = searchParams.get('course');
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -17,8 +17,8 @@ export default function PaymentStatus() {
               <p className="text-gray-600 mb-6">
                 Thank you for enrolling in our course. You'll receive a confirmation email shortly.
               </p>
-              <a href={`/courses/${courseId}`} className="btn-primary inline-block">
-                View Course
+              <a href={`/`} className="btn-primary inline-block">
+                Take me to Home
               </a>
             </>
           ) : (
