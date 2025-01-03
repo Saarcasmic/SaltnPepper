@@ -1,7 +1,12 @@
 import { courses } from '../data/courses';
 import UpcomingCourseCard from './UpcomingCourseCard';
 
-export default function UpcomingCoursesSection() {
+interface UpcomingCoursesSectionProps {
+  onDetailsClick: (courseId: { id: number }) => void;
+}
+
+
+export default function UpcomingCoursesSection({ onDetailsClick }: UpcomingCoursesSectionProps) {
   const upcomingCourses = courses.filter(
     course => course.isUpcoming && course.startDate && course.startDate > new Date()
   );
@@ -22,10 +27,11 @@ export default function UpcomingCoursesSection() {
               key={course.id} 
               {...course} 
               startDate={course.startDate!}
+              onDetailsClick={onDetailsClick} 
             />
           ))}
         </div>
       </div>
     </section>
   );
-} 
+}

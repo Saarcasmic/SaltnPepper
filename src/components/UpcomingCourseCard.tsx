@@ -1,11 +1,20 @@
-import { Clock, Users, Calendar } from 'lucide-react';
+import { Clock, Calendar } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import PaymentButton from './PaymentButton';
-import { Course } from '../types/course';
 
-type UpcomingCourseCardProps = Course & {
+interface UpcomingCourseCardProps {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  duration: string;
+  category: string;
+  price: number;
+  spots: number;
   startDate: Date;
-};
+  isUpcoming?: boolean;
+  onDetailsClick: (course: any) => void;
+}
 
 function getTimeRemaining(startDate: Date) {
   const total = startDate.getTime() - new Date().getTime();
@@ -18,9 +27,10 @@ function getTimeRemaining(startDate: Date) {
 }
 
 export default function UpcomingCourseCard({ 
-  id, title, description, image, duration, category, price, spots, startDate 
+  id, title, description, image, duration, category, price, spots, startDate, isUpcoming, onDetailsClick 
 }: UpcomingCourseCardProps) {
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(startDate));
+  const upcomingStatus = isUpcoming ?? false;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,6 +44,10 @@ export default function UpcomingCourseCard({
 
     return () => clearInterval(timer);
   }, [startDate]);
+
+  const handleDetailsClick = () => {
+    onDetailsClick({ id, title, description, image, duration, category, price, spots });
+  };
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02]">
@@ -90,16 +104,20 @@ export default function UpcomingCourseCard({
             <span>{duration}</span>
           </div>
           <div className="flex items-center">
-            <Users className="h-4 w-4 mr-1" />
-            <span>{spots} spots left</span>
+            <span className="text-2xl font-bold text-gray-900">₹{price}</span>
           </div>
         </div>
         
         <div className="mt-6 flex items-center justify-between">
-          <span className="text-2xl font-bold text-gray-900">₹{price}</span>
-          <PaymentButton courseId={id} price={price} />
+          <button
+            onClick={handleDetailsClick}
+            className="ml-4 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+          >
+            Details
+          </button>
+          <PaymentButton courseId={id} price={price} coursetitle={title} status={upcomingStatus} coursecategory={category}/>
         </div>
       </div>
     </div>
   );
-} 
+}

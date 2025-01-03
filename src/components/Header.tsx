@@ -61,6 +61,9 @@ export default function Header() {
             <a href="#courses" className="nav-link" onClick={(e) => handleNavigation(e, 'courses')}>
               Courses
             </a>
+            <a href="#testinomials" className="nav-link" onClick={(e) => handleNavigation(e, 'testinomials')}>
+              Testinomials
+            </a>
             <a href="#contact" className="nav-link" onClick={(e) => handleNavigation(e, 'contact')}>
               Contact
             </a>

@@ -15,7 +15,11 @@ export default function PaymentStatus() {
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
               <h1 className="text-2xl font-bold text-gray-900 mb-2">Payment Successful!</h1>
               <p className="text-gray-600 mb-6">
-                Thank you for enrolling in our course. You'll receive a confirmation email shortly.
+                Thank you for enrolling in our course.
+              </p>
+              <p className="text-gray-600 mb-6">
+                You'll receive the course link on your respective WhatsApp number within the next 24 hours.
+                In case of queries, contact us on +91 74098 68983.
               </p>
               <a href={`/`} className="btn-primary inline-block">
                 Take me to Home

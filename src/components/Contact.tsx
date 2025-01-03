@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Youtube, Facebook, Instagram } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -67,6 +67,49 @@ export default function Contact() {
                 <p className="text-gray-600">Mathura, U.P</p>
               </div>
             </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <Youtube className="h-6 w-6 text-orange-500" />
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-gray-900">YouTube</h3>
+                <p className="mt-1 text-gray-600">
+                  <a href="https://www.youtube.com/@saltandpepperclasses5428" target="_blank" rel="noopener noreferrer">
+                    @saltandpepperclasses
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <Facebook className="h-6 w-6 text-orange-500" />
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-gray-900">Facebook</h3>
+                <p className="mt-1 text-gray-600">
+                  <a href="https://www.facebook.com/saltandpepperlearntocook" target="_blank" rel="noopener noreferrer">
+                    @saltandpepperlearntocook
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <Instagram className="h-6 w-6 text-orange-500" />
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-gray-900">Instagram</h3>
+                <p className="mt-1 text-gray-600">
+                  <a href="https://www.instagram.com/salt_and_pepper_learn_to_cook/" target="_blank" rel="noopener noreferrer">
+                    @salt_and_pepper_learn_to_cook
+                  </a>
+                </p>
+              </div>
+            </div>
+            
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
