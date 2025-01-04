@@ -12,13 +12,15 @@ interface CourseCardProps {
   spots: number;
   isUpcoming?: boolean;
   onDetailsClick: (course: any) => void | undefined;
+  vidAvailable: boolean;
 }
 
 export default function CourseCard({ 
-  id, title, description, image, duration, category, price, spots, isUpcoming, onDetailsClick 
+  id, title, description, image, duration, category, price, spots, isUpcoming, onDetailsClick, vidAvailable 
 }: CourseCardProps) {
   
   const upcomingStatus = isUpcoming ?? false;
+  // const VideoAvailable = vidAvailable ?? false;
 
   const handleDetailsClick = () => {
     onDetailsClick({ id, title, description, image, duration, category, price, spots });
@@ -46,13 +48,34 @@ export default function CourseCard({
           </div>
         </div>
         <div className="mt-6 flex items-center justify-between">
-          <PaymentButton courseId={id} price={price} coursetitle={title} status={upcomingStatus} coursecategory={category}/>
-          <button
+        <button
             onClick={handleDetailsClick}
             className="ml-4 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
           >
             Details
           </button>
+          {vidAvailable ? (
+            <PaymentButton 
+              courseId={id} 
+              price={price} 
+              coursetitle={title} 
+              status={upcomingStatus} 
+              coursecategory={category}
+            />
+          ) : (
+            <div className="relative group">
+              <button
+                className="px-4 py-2 bg-orange-500 text-white rounded-lg 
+                    hover:bg-orange-600 transition-colors"
+              >
+                Inquire Us
+              </button>
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                +91 74098 68983
+              </div>
+            </div>
+          )}
+          
         </div>
       </div>
     </div>

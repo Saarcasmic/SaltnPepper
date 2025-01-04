@@ -72,7 +72,7 @@ export default function TrainingCarousel() {
                 <div className={`relative h-[600px] ${isFlipped && index === activeIndex ? 'rotate-y-180' : ''} transition-transform duration-700 transform-style-3d`}>
                   {/* Front */}
                   <div className={`absolute w-full h-full backface-hidden ${isFlipped && index === activeIndex ? 'invisible' : ''}`}>
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col">
+                  <div className="bg-white rounded-xl shadow-2xl overflow-hidden h-full flex flex-col">
                       <img 
                         src={program.image} 
                         alt={program.name}

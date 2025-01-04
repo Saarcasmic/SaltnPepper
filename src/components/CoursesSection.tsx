@@ -5,7 +5,7 @@ import { categories } from '../data/courses';
 interface CoursesSectionProps {}
 
 export default function CoursesSection({}: CoursesSectionProps) {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('Baking & Confectionary');
   
 
   return (

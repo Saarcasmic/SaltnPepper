@@ -42,7 +42,8 @@ export default function TestimonialsCarousel() {
   }, [currentIndex]);
 
   return (
-    <div className="max-w-2xl mx-auto py-12 px-4" id="testinomials">
+    <section className='bg-gray-50'>
+    <div className="max-w-2xl  mx-auto py-12 px-4" id="testinomials">
       <h2 className="text-3xl font-bold text-center mb-12">Student Testimonials</h2>
       
       <div className="relative flex justify-center items-center">
@@ -91,5 +92,6 @@ export default function TestimonialsCarousel() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
