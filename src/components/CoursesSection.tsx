@@ -3,7 +3,7 @@ import CourseGrid from './CourseGrid';
 import { categories } from '../data/courses';
 import CourseCard from './CourseCard';
 import { Course } from '../types/course';
-import { courses } from '../data/courses';
+// import { courses } from '../data/courses';
 
 interface CoursesSectionProps {
   onDetailsClick: (courseId: { id: number }) => void;}
@@ -88,15 +88,7 @@ export default function CoursesSection({ onDetailsClick }: CoursesSectionProps) 
         </div>
         
         <CourseGrid activeCategory={activeCategory} />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map(course => (
-            <CourseCard 
-              key={course.id} 
-              {...course} 
-              onDetailsClick={onDetailsClick} 
-            />
-          ))}
-        </div>
+        
       </div>
     </section>
   );

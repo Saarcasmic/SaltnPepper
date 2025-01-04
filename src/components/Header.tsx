@@ -40,7 +40,7 @@ export default function Header() {
   }, [location]);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${
+    <header className={`fixed w-full z-40 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,6 +94,9 @@ export default function Header() {
               </a>
               <a href="#courses" className="mobile-nav-link" onClick={(e) => handleNavigation(e, 'courses')}>
                 Courses
+              </a>
+              <a href="#testinomials" className="mobile-nav-link" onClick={(e) => handleNavigation(e, 'testinomials')}>
+                Testinomials
               </a>
               <a href="#contact" className="mobile-nav-link" onClick={(e) => handleNavigation(e, 'contact')}>
                 Contact

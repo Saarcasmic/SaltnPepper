@@ -7,7 +7,7 @@ import About from './components/About/About';
 import PaymentStatus from './components/PaymentStatus';
 import UpcomingCoursesSection from './components/UpcomingCoursesSection';
 import { useState } from 'react';
-import { Clock, DollarSign } from 'lucide-react';
+import { Clock, IndianRupee } from 'lucide-react';
 import { courses } from './data/courses';
 import TrainingProgramsSection from './components/TrainingProgramsSection';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
@@ -83,7 +83,7 @@ function App() {
                   <span>{selectedCourse.duration}</span>
                 </div>
                 <div className="flex items-center mt-2">
-                  <DollarSign className="h-4 w-4 mr-1" />
+                  <IndianRupee className="h-4 w-4 mr-1" />
                   <span>₹{selectedCourse.price}</span>
                 </div>
                 <div className="flex items-center mt-2">

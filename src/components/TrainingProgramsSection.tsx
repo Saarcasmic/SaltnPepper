@@ -72,15 +72,17 @@ export default function TrainingCarousel() {
                 <div className={`relative h-[600px] ${isFlipped && index === activeIndex ? 'rotate-y-180' : ''} transition-transform duration-700 transform-style-3d`}>
                   {/* Front */}
                   <div className={`absolute w-full h-full backface-hidden ${isFlipped && index === activeIndex ? 'invisible' : ''}`}>
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col">
                       <img 
                         src={program.image} 
                         alt={program.name}
                         className="w-full h-72 object-cover"
                       />
-                      <div className="p-8">
-                        <h2 className="text-3xl font-bold mb-4">{program.name}</h2>
-                        <p className="text-gray-600 mb-6 leading-relaxed">{program.description}</p>
+                      <div className="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                          <h2 className="text-3xl font-bold mb-4">{program.name}</h2>
+                          <p className="text-gray-600 mb-6 leading-relaxed">{program.description}</p>
+                        </div>
                         <button
                           onClick={handleFlip}
                           className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors"
@@ -93,33 +95,32 @@ export default function TrainingCarousel() {
 
                   {/* Back */}
                   <div className={`absolute w-full h-full backface-hidden rotate-y-180 ${isFlipped && index === activeIndex ? '' : 'invisible'}`}>
-                    <div className="bg-white rounded-xl shadow-lg p-8">
-                      <h3 className="text-2xl font-bold mb-6">{program.name} Training Options</h3>
-                      
-                      <div className="flex gap-3 mb-8">
-                        {Object.keys(program.durations).map((duration) => (
-                          <button
-                            key={duration}
-                            onClick={() => setSelectedDuration(duration as '15 days' | '3 months' | '6 months')}
-                            className={`flex-1 py-3 px-4 rounded-lg transition-colors text-sm font-medium
-                              ${selectedDuration === duration 
-                                ? 'bg-orange-500 text-white' 
-                                : 'bg-gray-100 hover:bg-gray-200'}`}
-                          >
-                            {duration}
-                          </button>
-                        ))}
+                    <div className="bg-white rounded-xl shadow-lg p-8 h-full flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-2xl font-bold mb-6">{program.name} Training Options</h3>
+                        <div className="flex gap-3 mb-8">
+                          {Object.keys(program.durations).map((duration) => (
+                            <button
+                              key={duration}
+                              onClick={() => setSelectedDuration(duration as '15 days' | '3 months' | '6 months')}
+                              className={`flex-1 py-3 px-4 rounded-lg transition-colors text-sm font-medium
+                                ${selectedDuration === duration 
+                                  ? 'bg-orange-500 text-white' 
+                                  : 'bg-gray-100 hover:bg-gray-200'}`}
+                            >
+                              {duration}
+                            </button>
+                          ))}
+                        </div>
+                        <div className="space-y-4 mb-8">
+                          {program.durations[selectedDuration as '15 days' | '3 months' | '6 months'].map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-3">
+                              <div className="w-2 h-2 bg-orange-500 rounded-full" />
+                              <p className="text-gray-700">{feature}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-
-                      <div className="space-y-4 mb-8">
-                        {program.durations[selectedDuration as '15 days' | '3 months' | '6 months'].map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-3">
-                            <div className="w-2 h-2 bg-orange-500 rounded-full" />
-                            <p className="text-gray-700">{feature}</p>
-                          </div>
-                        ))}
-                      </div>
-
                       <button
                         onClick={handleFlip}
                         className="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors"
@@ -136,14 +137,14 @@ export default function TrainingCarousel() {
 
         <button
           onClick={handlePrev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-white shadow-lg p-3 rounded-full hover:bg-gray-100 disabled:opacity-50"
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white shadow-lg p-3 rounded-full hover:bg-gray-100 disabled:opacity-50"
           disabled={isFlipped}
         >
           ←
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-white shadow-lg p-3 rounded-full hover:bg-gray-100 disabled:opacity-50"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white shadow-lg p-3 rounded-full hover:bg-gray-100 disabled:opacity-50"
           disabled={isFlipped}
         >
           →

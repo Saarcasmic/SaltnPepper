@@ -65,7 +65,7 @@ export default function CourseGrid({ activeCategory }: CourseGridProps) {
                 <span>{selectedCourse.price}</span>
               </div>
               <div className="flex items-center mt-2">
-                <span>{selectedCourse.spots} spots left</span>
+                <span>{selectedCourse.spots} spotsss left</span>
               </div>
             </div>
           </div>

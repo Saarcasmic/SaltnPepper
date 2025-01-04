@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 declare global {
@@ -42,7 +42,7 @@ export default function TestimonialsCarousel() {
   }, [currentIndex]);
 
   return (
-    <div className="max-w-2xl mx-auto py-12 px-4" id="testimonials">
+    <div className="max-w-2xl mx-auto py-12 px-4" id="testinomials">
       <h2 className="text-3xl font-bold text-center mb-12">Student Testimonials</h2>
       
       <div className="relative flex justify-center items-center">
@@ -68,14 +68,14 @@ export default function TestimonialsCarousel() {
 
         <button
           onClick={() => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-white shadow-lg p-2 rounded-full hover:bg-gray-100"
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white shadow-lg p-2 rounded-full hover:bg-gray-100"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
 
         <button
           onClick={() => setCurrentIndex((prev) => (prev + 1) % testimonials.length)}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-white shadow-lg p-2 rounded-full hover:bg-gray-100"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white shadow-lg p-2 rounded-full hover:bg-gray-100"
         >
           <ChevronRight className="w-6 h-6" />
         </button>

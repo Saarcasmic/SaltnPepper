@@ -5,6 +5,7 @@ export const categories = [
   'Desserts and Sweet Treats',
   'Snacks and Essentials',
   'Specialty Courses',
+  'Health Focused Cuisines'
 ];
 
 export const courses = [
@@ -364,4 +365,16 @@ export const courses = [
     startDate: new Date('2026-05-01'),
     isUpcoming: false
   },
+  {
+    id: 30,
+    title: 'Cooking with Millets',
+    description: 'Discover the health benefits and versatility of cooking with millets.',
+    image: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2014/10/millet-biryani-thinai-pulao.jpg?auto=format&fit=crop&q=80',
+    duration: '3 hours',
+    category: 'Health Focused Cuisines',
+    price: 140,
+    spots: 10,
+    startDate: new Date('2026-05-01'),
+    isUpcoming: false
+  }
 ];

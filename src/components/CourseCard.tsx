@@ -1,6 +1,5 @@
-import { Clock, IndianRupee } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import PaymentButton from './PaymentButton';
-import { useState } from 'react';
 
 interface CourseCardProps {
   id: number;
@@ -18,18 +17,13 @@ interface CourseCardProps {
 export default function CourseCard({ 
   id, title, description, image, duration, category, price, spots, isUpcoming, onDetailsClick 
 }: CourseCardProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
   const upcomingStatus = isUpcoming ?? false;
 
   const handleDetailsClick = () => {
-    if (onDetailsClick) {
-      onDetailsClick({ id, title, description, image, duration, category, price, spots, isUpcoming });
-    }
+    onDetailsClick({ id, title, description, image, duration, category, price, spots });
   };
 
-  const handleCloseSidebar = () => {
-    setIsSidebarOpen(false);
-  };
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02]">
@@ -61,34 +55,6 @@ export default function CourseCard({
           </button>
         </div>
       </div>
-
-      {isSidebarOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
-          <div className="bg-white w-80 h-full shadow-lg p-6">
-            <button
-              onClick={handleCloseSidebar}
-              className="mb-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-            >
-              Close
-            </button>
-            <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-            <p className="mt-2 text-gray-600">{description}</p>
-            <div className="mt-4 text-sm text-gray-500">
-              <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-1" />
-                <span>{duration}</span>
-              </div>
-              <div className="flex items-center mt-2">
-                <IndianRupee className="h-4 w-4 mr-1" />
-                <span>${price}</span>
-              </div>
-              <div className="flex items-center mt-2">
-                <span>{spots} spots left</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
