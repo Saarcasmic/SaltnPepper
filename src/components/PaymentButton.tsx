@@ -121,10 +121,14 @@ export default function PaymentButton({
           className="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-md relative"
           onClick={handleDialogClick}
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Enter Your Email</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            <label htmlFor="email-input">Enter Your Email</label>
+          </h3>
           <input
             ref={inputRef}
             type="email"
+            id="email-input"
+            name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email Address"
