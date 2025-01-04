@@ -12,6 +12,8 @@ export default function CourseGrid({ activeCategory }: CourseGridProps) {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+
+  
   const filteredCourses = activeCategory === 'all'
     ? courses
     : courses.filter(course => course.category === activeCategory);

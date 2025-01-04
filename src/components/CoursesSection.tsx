@@ -1,12 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CourseGrid from './CourseGrid';
 import { categories } from '../data/courses';
+
 
 interface CoursesSectionProps {}
 
 export default function CoursesSection({}: CoursesSectionProps) {
   const [activeCategory, setActiveCategory] = useState('Baking & Confectionary');
   
+  useEffect(() => {
+    const handleSetCategory = (e: CustomEvent) => {
+      setActiveCategory(e.detail.category);
+    };
+
+    window.addEventListener('setActiveCategory', handleSetCategory as EventListener);
+    
+    return () => {
+      window.removeEventListener('setActiveCategory', handleSetCategory as EventListener);
+    };
+  }, []);
 
   return (
     <section className="py-24 bg-gray-50" id="courses">
