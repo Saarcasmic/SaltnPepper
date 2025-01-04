@@ -46,8 +46,13 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 max-w-xl mx-auto">
-            <form onSubmit={handleSearch} className="relative">
+            <form onSubmit={handleSearch} className="relative" role="search">
+              <label htmlFor="search-input" className="sr-only">
+                Search courses
+              </label>
               <input
+                id="search-input"
+                name="search"
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
