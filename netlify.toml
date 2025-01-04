@@ -2,3 +2,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[build]
+  functions = "functions"
+
+[dev]
+  publish = "dist"  # Adjust this if you have a specific build output for your frontend

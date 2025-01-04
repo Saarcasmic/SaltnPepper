@@ -1,15 +1,14 @@
+// functions/payment.js
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import corsOptions from './config/cors.js';
-import paymentRoutes from './routes/paymentRoutes.js';
+import corsOptions from '../server/config/cors.js'; // Adjust path as necessary
+import paymentRoutes from '../server/routes/paymentRoutes.js'; // Adjust path as necessary
 import serverless from 'serverless-http';
 
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
-
 app.use(cors(corsOptions));
 app.use(express.json());
 
@@ -29,9 +28,5 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Export the handler for Netlify
 export const handler = serverless(app);
-
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
