@@ -62,6 +62,7 @@ export default function Hero() {
               />
               <button
                 type="submit"
+                aria-label="Search courses"
                 className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-orange-500 
                          rounded-full text-white hover:bg-orange-600 transition-colors"
               >
