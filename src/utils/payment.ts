@@ -12,7 +12,7 @@ export const initializeRazorpay = () => {
 
 export const createOrder = async (courseId: number, price: number) => {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/create-order`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/create-order`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ courseId, price }),
@@ -36,7 +36,7 @@ export const createOrder = async (courseId: number, price: number) => {
 
 export const verifyPayment = async (paymentData: any) => {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/verify-payment`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/verify-payment`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(paymentData),
