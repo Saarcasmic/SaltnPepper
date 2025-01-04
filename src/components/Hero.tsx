@@ -28,7 +28,7 @@ export default function Hero() {
     <div className="relative bg-orange-50 min-h-screen flex items-center" id="home">
       <div className="absolute inset-0">
         <img
-          src="/Background.jpg"
+          src="https://i.ibb.co/tQLJB5P/Highlights-from-our-cookie-biscuit-class-so-many-memories-and-sweetness-Delicious-and-crunchy-biscui.jpg?auto=format&fit=crop&q=80"
           alt="Cooking class background"
           className="w-full h-full object-cover opacity-20"
         />
