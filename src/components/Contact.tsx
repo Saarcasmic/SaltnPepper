@@ -17,8 +17,9 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <Phone className="h-6 w-6 text-orange-500" />
@@ -120,7 +121,7 @@ export default function Contact() {
               />
             </div> */}
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 }
