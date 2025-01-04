@@ -1,26 +1,9 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Youtube, Facebook, Instagram } from 'lucide-react';
+
+import { Mail, Phone, MapPin, Youtube, Facebook, Instagram } from 'lucide-react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   return (
     <section className="py-24 bg-white" id="contact">
@@ -112,67 +95,19 @@ export default function Contact() {
             
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="mt-1 input-primary"
-                required
+          <div className="h-[500px] rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3538.7404961272437!2d77.6479266!3d27.5084449!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397373d424f6b13d%3A0xa523fc08808aea02!2sSalt%20And%20Pepper%20%3A%20Learn%20to%20Cook!5e0!3m2!1sen!2sin!4v1735988103150!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Store Location"
+                className="grayscale hover:grayscale-0 transition-all duration-300"
               />
             </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="mt-1 input-primary"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                className="mt-1 input-primary"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={4}
-                className="mt-1 input-primary"
-                required
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full btn-primary flex items-center justify-center"
-            >
-              <Send className="h-5 w-5 mr-2" />
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
     </section>
