@@ -58,8 +58,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-gray-900">Location</h3>
-                <p className="mt-1 text-gray-600">1/21, Radhapuram Estate</p>
-                <p className="text-gray-600">Mathura, U.P</p>
+                <a href='https://maps.app.goo.gl/poQSGPVJjx9YxRHW7' className="mt-1 text-gray-600">1/21, Radhapuram Estate, Mathura, U.P</p>
+                
               </div>
             </div>
 
