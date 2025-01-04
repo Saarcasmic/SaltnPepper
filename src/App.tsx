@@ -12,8 +12,7 @@ import { courses } from './data/courses';
 import TrainingProgramsSection from './components/TrainingProgramsSection';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
 import AboutSalt from './components/AboutSalt';
-
-
+import ScrollableContainer from './ScrollableContainer';
 
 
 
@@ -55,9 +54,11 @@ function App() {
   };
 
   return (
+    
     <Router>
       <div className="min-h-screen bg-white">
         <Header />
+        {/* <ScrollableContainer> */}
         <Routes>
           <Route path="/payment/success" element={<PaymentStatus />} />
           <Route path="/about-salt" element={<AboutSalt />} />
@@ -91,9 +92,10 @@ function App() {
             </div>
           </div>
         )}
-        
+        {/* </ScrollableContainer> */}
       </div>
     </Router>
+    
   );
 }
 

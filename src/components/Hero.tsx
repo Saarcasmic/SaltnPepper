@@ -71,24 +71,32 @@ export default function Hero() {
             </form>
 
             {searchResults.length > 0 && (
-              <div
-                className="absolute z-10 w-full mt-2 bg-white rounded-lg shadow-lg overflow-y-auto max-h-96"
-                style={{
-                  border: '1px solid #e2e8f0',
-                }}
+              <div 
+                className="absolute z-10 left-1/2 transform -translate-x-1/2 
+                          w-[calc(100%+4rem)] mt-2 bg-white rounded-2xl shadow-lg 
+                          border border-gray-200"
+                style={{ maxHeight: '400px' }}
               >
-                <ul className="divide-y divide-gray-100">
+                <ul 
+                  className="divide-y divide-gray-100 overflow-y-auto max-h-[400px]
+                            scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+                  role="listbox"
+                  style={{
+                    scrollbarWidth: 'thin',
+                    scrollbarColor: '#f97316 #f3f4f6'
+                  }}
+                >
                   {searchResults.map((course: any) => (
                     <li
                       key={course.id}
-                      className="p-4 hover:bg-gray-50 cursor-pointer"
+                      className="p-4 hover:bg-gray-50 cursor-pointer transition-colors"
                       onClick={() => handleSearchItemClick(course)}
+                      role="option"
                     >
                       <div className="flex items-center">
-                        <img src={course.image} alt={course.title} className="w-16 h-16 object-cover rounded" />
-                        <div className="ml-4">
+                        <div className="ml-4 flex flex-col md:flex-row md:items-center md:justify-between w-full">
                           <h3 className="font-medium text-gray-900">{course.title}</h3>
-                          <p className="text-sm text-gray-500">{course.category}</p>
+                          <p className="text-sm text-gray-500 md:ml-4">{course.category}</p>
                         </div>
                       </div>
                     </li>
