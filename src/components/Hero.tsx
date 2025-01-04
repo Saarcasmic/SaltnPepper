@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import { searchCourses } from '../utils/search';
-import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<
     { id: number; title: string; description: string; image: string; duration: string; category: string; price: number; spots: number; }[]
   >([]);
-  const navigate = useNavigate();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
