@@ -13,6 +13,10 @@ import TrainingProgramsSection from './components/TrainingProgramsSection';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
 import AboutSalt from './components/AboutSalt';
 
+
+
+
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
@@ -33,6 +37,18 @@ function App() {
     }
   };
 
+  const MainContent = () => (
+    <main>
+      <Hero />
+      <About />
+      <UpcomingCoursesSection onDetailsClick={handleDetailsClick} />
+      <CoursesSection />
+      <TrainingProgramsSection />
+      <TestimonialsCarousel />
+      <Contact />
+    </main>
+  );
+
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false);
     setSelectedCourse(null);
@@ -45,28 +61,8 @@ function App() {
         <Routes>
           <Route path="/payment/success" element={<PaymentStatus />} />
           <Route path="/about-salt" element={<AboutSalt />} />
-          <Route path="/" element={
-            <main>
-              <Hero />
-              <About />
-              <UpcomingCoursesSection onDetailsClick={handleDetailsClick} />
-              <CoursesSection  />
-              <TrainingProgramsSection />
-              <TestimonialsCarousel />
-              <Contact />
-            </main>
-          } />
-          <Route path="*" element={
-            <main>
-              <Hero />
-              <About />
-              <UpcomingCoursesSection onDetailsClick={handleDetailsClick} />
-              <CoursesSection  />
-              <TrainingProgramsSection />
-              <TestimonialsCarousel />
-              <Contact />
-            </main>
-          } />
+          <Route path="/" element={<MainContent />} />
+          <Route path="*" element={<MainContent />} />
         </Routes>
         {isSidebarOpen && selectedCourse && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
@@ -95,6 +91,7 @@ function App() {
             </div>
           </div>
         )}
+        
       </div>
     </Router>
   );
