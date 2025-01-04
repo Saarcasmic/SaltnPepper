@@ -43,7 +43,7 @@ function App() {
       <UpcomingCoursesSection onDetailsClick={handleDetailsClick} />
       <CoursesSection />
       <TrainingProgramsSection />
-      {/* <TestimonialsCarousel /> */}
+      <TestimonialsCarousel />
       <Contact />
     </main>
   );

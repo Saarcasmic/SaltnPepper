@@ -12,14 +12,14 @@ const testimonials = [
     id: 1,
     embedCode: 'https://www.instagram.com/p/DC6HRt-T3FO/',
   },
-  {
-    id: 2,
-    embedCode: 'YOUR_SECOND_POST_URL',
-  },
-  {
-    id: 3,
-    embedCode: 'YOUR_THIRD_POST_URL',
-  }
+  // {
+  //   id: 2,
+  //   embedCode: 'YOUR_SECOND_POST_URL',
+  // },
+  // {
+  //   id: 3,
+  //   embedCode: 'YOUR_THIRD_POST_URL',
+  // }
 ];
 
 export default function TestimonialsCarousel() {
