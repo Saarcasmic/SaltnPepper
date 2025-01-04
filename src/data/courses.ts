@@ -40,7 +40,7 @@ export const courses = [
     id: 3,
     title: 'Fondant Cakes',
     description: 'Master the art of fondant decoration to make stunning cakes.',
-    image: 'https://www.bakingo.com/blog/wp-content/uploads/2024/01/Trending-Fondant-Cake-cover.jpg?auto=format&fit=crop&q=80',
+    image: '/sugar.jpg',
     duration: '6 hours',
     category: 'Baking & Confectionary',
     price: 200,
