@@ -56,6 +56,9 @@ export default function Header() {
               Home
             </a>
             <a href="#about" className="nav-link" onClick={(e) => handleNavigation(e, 'about')}>
+              About Chef
+            </a>
+            <a href="/about-salt" className="nav-link">
               About Us
             </a>
             <a href="#courses" className="nav-link" onClick={(e) => handleNavigation(e, 'courses')}>
@@ -67,6 +70,7 @@ export default function Header() {
             <a href="#contact" className="nav-link" onClick={(e) => handleNavigation(e, 'contact')}>
               Contact
             </a>
+            
           </nav>
 
           {/* Mobile Menu Button */}
@@ -90,6 +94,9 @@ export default function Header() {
                 Home
               </a>
               <a href="#about" className="mobile-nav-link" onClick={(e) => handleNavigation(e, 'about')}>
+                About Chef
+              </a>
+              <a href="/about-salt" className="mobile-nav-link">
                 About Us
               </a>
               <a href="#courses" className="mobile-nav-link" onClick={(e) => handleNavigation(e, 'courses')}>
@@ -98,9 +105,11 @@ export default function Header() {
               <a href="#testinomials" className="mobile-nav-link" onClick={(e) => handleNavigation(e, 'testinomials')}>
                 Testinomials
               </a>
+              
               <a href="#contact" className="mobile-nav-link" onClick={(e) => handleNavigation(e, 'contact')}>
                 Contact
               </a>
+              
             </div>
           </nav>
         )}

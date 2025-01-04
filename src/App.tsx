@@ -11,6 +11,7 @@ import { Clock, IndianRupee } from 'lucide-react';
 import { courses } from './data/courses';
 import TrainingProgramsSection from './components/TrainingProgramsSection';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
+import AboutSalt from './components/AboutSalt';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -43,6 +44,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/payment/success" element={<PaymentStatus />} />
+          <Route path="/about-salt" element={<AboutSalt />} />
           <Route path="/" element={
             <main>
               <Hero />
