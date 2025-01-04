@@ -31,14 +31,33 @@
 // export const handler = serverless(app);
 
 // functions/payment.js
-import { Handler } from '@netlify/functions';
+// functions/payment.js
+import express from 'express';
+import cors from 'cors';
+import serverless from 'serverless-http';
+import paymentRoutes from '../server/routes/paymentRoutes.js'; // Adjust path if necessary
 
-const handler: Handler = async (event) => {
-    return {
-        statusCode: 200,
-        body: JSON.stringify({ message: 'Hello from Netlify!' }),
-    };
-};
+const app = express();
+app.use(cors());
+app.use(express.json());
 
-export { handler };
+app.use('/api', paymentRoutes);
+
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok' });
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ 
+        error: { 
+            message: 'Internal server error',
+            code: err.code 
+        }
+    });
+});
+
+// Export the handler for Netlify
+export const handler = serverless(app);
+
 
