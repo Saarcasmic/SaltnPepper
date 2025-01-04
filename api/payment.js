@@ -3,35 +3,32 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import corsOptions from './config/cors.js';
 import paymentRoutes from './routes/paymentRoutes.js';
-import serverless from 'serverless-http';
 
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
 
+// Middleware
 app.use(cors(corsOptions));
 app.use(express.json());
 
-app.use('/api', paymentRoutes);
+// Routes
+app.use('/api/payment', paymentRoutes);
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+// Error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ 
-    error: { 
+  res.status(500).json({
+    error: {
       message: 'Internal server error',
-      code: err.code 
-    }
+      code: err.code,
+    },
   });
 });
 
-export const handler = serverless(app);
-
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+// Export as a serverless function
+export default app;
