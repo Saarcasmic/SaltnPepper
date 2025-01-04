@@ -48,7 +48,7 @@ function App() {
               <Hero />
               <About />
               <UpcomingCoursesSection onDetailsClick={handleDetailsClick} />
-              <CoursesSection onDetailsClick={handleDetailsClick} />
+              <CoursesSection  />
               <TrainingProgramsSection />
               <TestimonialsCarousel />
               <Contact />
@@ -59,7 +59,7 @@ function App() {
               <Hero />
               <About />
               <UpcomingCoursesSection onDetailsClick={handleDetailsClick} />
-              <CoursesSection onDetailsClick={handleDetailsClick} />
+              <CoursesSection  />
               <TrainingProgramsSection />
               <TestimonialsCarousel />
               <Contact />

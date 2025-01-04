@@ -1,18 +1,12 @@
 import { useState } from 'react';
 import CourseGrid from './CourseGrid';
 import { categories } from '../data/courses';
-import CourseCard from './CourseCard';
-import { Course } from '../types/course';
-// import { courses } from '../data/courses';
 
-interface CoursesSectionProps {
-  onDetailsClick: (courseId: { id: number }) => void;}
+interface CoursesSectionProps {}
 
-export default function CoursesSection({ onDetailsClick }: CoursesSectionProps) {
+export default function CoursesSection({}: CoursesSectionProps) {
   const [activeCategory, setActiveCategory] = useState('all');
-  const courses: Course[] = [
-    // Your courses data here
-  ];
+  
 
   return (
     <section className="py-24 bg-gray-50" id="courses">
