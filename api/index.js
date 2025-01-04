@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const paymentRoutes = require('./routes/paymentRoutes');
-const corsOptions = require('./config/cors');
+import express from 'express';
+import cors from 'cors';
+import paymentRoutes from './routes/paymentRoutes.js';  // Note the .js extension
+import corsOptions from './config/cors.js';  // Note the .js extension
 
 const app = express();
 
@@ -33,4 +33,4 @@ app.use((err, req, res, next) => {
 });
 
 // Vercel serverless function handler
-module.exports = app;
+export default app;

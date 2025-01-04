@@ -1,6 +1,8 @@
 import { razorpay } from '../config/razorpay.js';
 import crypto from 'crypto';
 
+
+
 export const createOrder = async (req, res) => {
   try {
     const { courseId, price } = req.body;
