@@ -9,15 +9,28 @@ const app = express();
 app.use(express.json());
 app.use(cors(corsOptions));
 
+// // Health check route
+// app.get('/api', (req, res) => {
+//   res.status(200).json({ message: 'API is running' });
+// });
+
+app.get('/api', (req, res) => {
+  console.log('Environment variables:', {
+    nodeEnv: process.env.NODE_ENV,
+    frontendUrl: process.env.FRONTEND_URL
+  });
+  res.status(200).json({ message: 'API is running' });
+});
+
 // Routes
 app.use('/api', paymentRoutes);
 
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Something broke!' });
+});
+
 // Vercel serverless function handler
-if (process.env.VERCEL) {
-  module.exports = app;
-} else {
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}
+module.exports = app;

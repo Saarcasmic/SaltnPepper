@@ -1,6 +1,6 @@
 import express from 'express';
 import { createOrder, verifyPayment } from '../controllers/paymentController.js';
-import { API_URL } from '../config/api';
+
 
 const router = express.Router();
 
