@@ -6,7 +6,7 @@ const AboutSalt = () => {
         <h2 className="text-4xl font-bold text-center mb-4">About Salt & Pepper</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <img src="https://i.ibb.co/tQLJB5P/Highlights-from-our-cookie-biscuit-class-so-many-memories-and-sweetness-Delicious-and-crunchy-biscui.jpg?auto=format&fit=crop&q=80" alt="Salt & Pepper" className="w-full h-auto rounded-lg shadow-lg" />
+            <img src="/Background.jpg" alt="Salt & Pepper" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
           <div>
             <p className="text-gray-600 mb-6 leading-relaxed">
