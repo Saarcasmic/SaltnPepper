@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { initializeRazorpay, createOrder, verifyPayment } from '../utils/payment';
 
 interface PaymentButtonProps {
@@ -10,7 +11,14 @@ interface PaymentButtonProps {
   coursecategory: string;
 }
 
-export default function PaymentButton({ courseId, coursetitle, status, price, coursecategory, className = '' }: PaymentButtonProps) {
+export default function PaymentButton({ 
+  courseId, 
+  coursetitle, 
+  status, 
+  price, 
+  coursecategory, 
+  className = '' 
+}: PaymentButtonProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -34,7 +42,7 @@ export default function PaymentButton({ courseId, coursetitle, status, price, co
       alert('Please enter a valid email address.');
       return;
     }
-    handlePayment(); // Proceed with payment after email validation
+    handlePayment();
   };
 
   const handlePayment = async () => {
@@ -70,8 +78,8 @@ export default function PaymentButton({ courseId, coursetitle, status, price, co
           }
         },
         prefill: {
-          email, // Use the provided email
-          contact: '', // Optionally leave it blank to collect later
+          email,
+          contact: '',
         },
         theme: {
           color: '#f97316',
@@ -85,8 +93,69 @@ export default function PaymentButton({ courseId, coursetitle, status, price, co
       alert('Something went wrong. Please try again later.');
     } finally {
       setIsLoading(false);
-      handleCloseDialog(); // Close dialog after payment initiation
+      handleCloseDialog();
     }
+  };
+
+  const EmailDialog = () => {
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
+    }, []);
+
+
+    // Stop propagation of click events
+    const handleDialogClick = (e: React.MouseEvent) => {
+      e.stopPropagation();
+    };
+
+    return createPortal(
+      <div 
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+        onClick={handleCloseDialog}
+      >
+        <div 
+          className="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-md relative"
+          onClick={handleDialogClick}
+        >
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Enter Your Email</h3>
+          <input
+            ref={inputRef}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email Address"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 mb-4"
+          />
+          <div className="flex justify-end space-x-2">
+            <button
+              onClick={handleCloseDialog}
+              className="px-4 py-2 bg-gray-300 rounded-lg text-gray-700 hover:bg-gray-400 transition-colors"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleEmailSubmit}
+              className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+            >
+              Submit
+            </button>
+          </div>
+
+          <button
+            onClick={handleCloseDialog}
+            className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+            aria-label="Close dialog"
+          >
+            ✕
+          </button>
+        </div>
+      </div>,
+      document.body
+    );
   };
 
   return (
@@ -101,43 +170,7 @@ export default function PaymentButton({ courseId, coursetitle, status, price, co
         {isLoading ? 'Processing...' : 'Book Now'}
       </button>
 
-      {/* Modal for Email Input */}
-      {isDialogOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-md relative">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Enter Your Email</h3>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email Address"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 mb-4"
-            />
-            <div className="flex justify-end space-x-2">
-              <button
-                onClick={handleCloseDialog}
-                className="px-4 py-2 bg-gray-300 rounded-lg text-gray-700 hover:bg-gray-400 transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleEmailSubmit}
-                className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
-              >
-                Submit
-              </button>
-            </div>
-
-            {/* Close Icon */}
-            <button
-              onClick={handleCloseDialog}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
+      {isDialogOpen && <EmailDialog />}
     </div>
   );
 }
