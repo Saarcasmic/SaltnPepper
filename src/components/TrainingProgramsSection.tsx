@@ -4,7 +4,7 @@ const trainingPrograms = [
   {
     name: 'Baking',
     description: 'Master the art of baking with hands-on experience in our state-of-the-art kitchen facilities. Learn from expert pastry chefs who will guide you through everything from basic bread making to advanced pastry techniques.',
-    image: 'https://plus.unsplash.com/premium_photo-1683707120403-9add00a6140e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/sugar.jpg',
     durations: {
       '15 days': ['Basic bread making', 'Kitchen safety', 'Fundamental techniques', 'Simple desserts'],
       '3 months': ['Advanced breads', 'Pastry skills', 'Cake decoration', 'Commercial baking'],
@@ -14,7 +14,7 @@ const trainingPrograms = [
   {
     name: 'Cooking',
     description: 'Discover culinary excellence through our comprehensive cooking program. Learn from renowned chefs, master diverse cooking techniques, and understand the art of flavor composition.',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/sugar.jpg',
     durations: {
       '15 days': ['Knife skills', 'Cooking basics', 'Kitchen setup', 'Simple meals'],
       '3 months': ['Global cuisines', 'Advanced techniques', 'Menu planning', 'Food styling'],
