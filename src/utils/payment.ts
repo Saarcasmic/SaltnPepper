@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+// const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 export const initializeRazorpay = () => {
   return new Promise((resolve) => {
@@ -12,7 +12,7 @@ export const initializeRazorpay = () => {
 
 export const createOrder = async (courseId: number, price: number) => {
   try {
-    const response = await fetch(`${API_URL}/api/create-order`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/create-order`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ courseId, price }),
@@ -36,7 +36,7 @@ export const createOrder = async (courseId: number, price: number) => {
 
 export const verifyPayment = async (paymentData: any) => {
   try {
-    const response = await fetch(`${API_URL}/api/verify-payment`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/verify-payment`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(paymentData),
