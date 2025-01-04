@@ -1,6 +1,7 @@
 
 import { Mail, Phone, MapPin, Youtube, Facebook, Instagram } from 'lucide-react';
 
+
 export default function Contact() {
   
 
@@ -105,7 +106,7 @@ export default function Contact() {
             
           </div>
 
-          <div className="h-[500px] rounded-xl overflow-hidden shadow-lg">
+          {/* <div className="h-[500px] rounded-xl overflow-hidden shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3538.7404961272437!2d77.6479266!3d27.5084449!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397373d424f6b13d%3A0xa523fc08808aea02!2sSalt%20And%20Pepper%20%3A%20Learn%20to%20Cook!5e0!3m2!1sen!2sin!4v1735988103150!5m2!1sen!2sin"
                 width="100%"
@@ -117,7 +118,7 @@ export default function Contact() {
                 title="Store Location"
                 className="grayscale hover:grayscale-0 transition-all duration-300"
               />
-            </div>
+            </div> */}
         </div>
       </div>
     </section>

@@ -139,9 +139,10 @@ export default function PaymentButton({
             </button>
             <button
               onClick={handleEmailSubmit}
+              disabled={isLoading}
               className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
             >
-              Submit
+            {isLoading ? 'Processing...' : 'Submit'}
             </button>
           </div>
 
@@ -160,15 +161,17 @@ export default function PaymentButton({
 
   return (
     <div>
-      <button
-        onClick={handleOpenDialog}
-        disabled={isLoading}
-        className={`px-4 py-2 bg-orange-500 text-white rounded-lg 
-                   hover:bg-orange-600 transition-colors
-                   disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
-      >
-        {isLoading ? 'Processing...' : 'Book Now'}
-      </button>
+      {!isLoading && (
+        <button
+          onClick={handleOpenDialog}
+          disabled={isLoading}
+          className={`px-4 py-2 bg-orange-500 text-white rounded-lg 
+                     hover:bg-orange-600 transition-colors
+                     disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+        >
+          Book Now
+        </button>
+      )}
 
       {isDialogOpen && <EmailDialog />}
     </div>
