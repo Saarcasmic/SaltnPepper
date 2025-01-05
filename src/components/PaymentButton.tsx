@@ -62,7 +62,7 @@ export default function PaymentButton({
         amount: order.amount,
         currency: order.currency,
         name: 'Salt & Pepper Cooking Classes',
-        description: `Course->(${coursetitle}) under Category->(${coursecategory}) having id->(#${courseId}) with upcoming status->(${status})`,
+        description: `Course->(${coursetitle}) under Category->(${coursecategory}) having id->(#${courseId}) with ${status ? "upcoming" : "recorded"} Course`,
         order_id: order.id,
         handler: async (response: any) => {
           try {

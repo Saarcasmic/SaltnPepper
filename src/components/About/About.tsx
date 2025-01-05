@@ -13,16 +13,34 @@ export default function About() {
           </div>
           <Card3D className="bg-white/50 backdrop-blur-sm rounded-2xl p-8">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  With extensive experience in training over 6,000 students in cooking and baking, I've dedicated my life to
-                  empowering women to become self-dependent through 40+ professional courses offered worldwide.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  My mission emphasizes promoting good health while making cooking accessible and enjoyable for everyone,
-                  through both online and offline programs designed to share culinary knowledge and skills.
-                </p>
-              </div>
+            <div className="space-y-4">
+              <p className="text-lg text-gray-600 leading-relaxed">
+                In the past, I was a simple home baker, dedicating my life to my family and children. 
+                However, I started noticing how our society was leaning towards unhealthy eating habits, 
+                leading to the rise of lifestyle diseases like fatty liver and other health issues. 
+                I felt a strong need to make a difference and decided to take action.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Cooking had always been my strength, and I was often praised by my family and friends 
+                for my skills. I realized that I could use my talent to help others overcome their 
+                fear of cooking. I began by teaching my near and dear ones, and soon, this effort 
+                turned into a passion. This passion gave birth to Salt & Pepper: Cooking & Baking Classes.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                It became my mission to empower people socially, emotionally, and economically through 
+                the art of cooking and baking. Over the years, we have trained more than 6,000 students 
+                who are now successfully running their own ventures, from home bakeries to cafés and 
+                cloud kitchens.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                I believe that cooking is not just about making food; it's about gaining confidence, 
+                independence, and creating opportunities. Through Salt & Pepper, I am proud to be part 
+                of this journey, helping people turn their passion into a way of life.
+              </p>
+            </div>
               <Stats />
             </div>
           </Card3D>
