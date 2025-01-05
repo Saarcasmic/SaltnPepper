@@ -186,226 +186,116 @@ const trainingPrograms: TrainingProgram[] = [
   },
   {
     name: 'Cooking',
-    description: 'Master the art of baking with hands-on experience in our state-of-the-art kitchen facilities. Learn from expert pastry chefs who will guide you through everything from basic bread making to advanced pastry techniques.',
+    description: "Dive into the world of culinary arts with hands-on training in our professional kitchen environment. Learn from experienced chefs who will guide you through fundamental cooking techniques to advanced international cuisine preparation.",
     theory: [
-      'Difference between Baking powder, soda and eno',
-      'Why cake sponges crack on top and how to avoid that',
-      'How to prevent the crust from the top and bake perfect sponge',
-      'Why cake sunk/dipped in the middle',
-      'How to use different instruments for baking like OTG microwave and gas',
-      'Knowledge about ingredients, buying and storing'
+      "Understanding different cooking methods (braising, sautéing, roasting, etc.)",
+      "Knife skills and kitchen safety protocols",
+      "Food science and ingredient compatibility",
+      "Temperature control and food safety",
+      "Menu planning and portion control",
+      "Ingredient selection, storage, and shelf life"
     ],
-    image: 'https://plus.unsplash.com/premium_photo-1683707120403-9add00a6140e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     programDetails: {
-      'Beginner friendly training program': {
-        tagline: 'Start baking, start earning',
-        duration: '15 Days',
+      "Basic culinary training program": {
+        tagline: "Start cooking, start earning",
+        duration: "15 Days",
         whoShouldEnroll: [
-          'Beginners',
-          'Skill upgraders',
-          'Passionate bakers',
-          'Aspiring bakery owners',
-          'Side income seekers',
-          'Want to bake good cakes for family and friends'
+          "Beginners",
+          "Home cooks",
+          "Food enthusiasts",
+          "Career changers",
+          "Side business seekers",
+          "Those wanting to cook better for family and friends"
         ],
         courseContent: [
-          'Learning batter from scratch',
-          'Cake baking like professional bakers',
-          'Perfect whipping cream making',
-          'Icing techniques',
-          'Different theme garnishing',
-          'Different popular flavors of cakes',
-          'Basic chocolate garnishing',
-          'Topper creation',
-          'Nozzle and tool work',
-          'Chocolate cream making'
+          "Basic knife skills and kitchen safety",
+          "Understanding spices and seasonings",
+          "Fundamental cooking techniques",
+          "Sauce making fundamentals",
+          "Basic meal planning",
+          "Popular Indian dishes",
+          "International cuisine basics",
+          "Plating techniques",
+          "Kitchen organization",
+          "Food preservation methods"
         ],
         benefits: [
-          'Make and take: Make your cakes in class, and make your family members happy by taking them home',
-          'No prior Baking/Cooking knowledge required!!',
-          'Learn Baking of Bakery Cakes Sponges From Scratch (Not only with ready cake mix)'
+          "Cook and taste: Prepare dishes in class and take them home to share",
+          "No prior cooking experience required",
+          "Learn authentic cooking methods (Not just following recipes)"
         ]
       },
-      'Baking business course': {
-        tagline: 'Bake Like a Pro, Earn with Confidence!',
-        duration: '3 Months',
+      "Professional cooking course": {
+        tagline: "Cook Like a Pro, Build Your Culinary Career!",
+        duration: "3 Months",
         whoShouldEnroll: [
-          'Beginners',
-          'Skill upgraders',
-          'Passionate bakers',
-          'Aspiring bakery owners',
-          'Side income seekers',
-          'Want to bake good cakes for family and friends'
+          "Aspiring chefs",
+          "Restaurant owners",
+          "Food business entrepreneurs",
+          "Catering professionals",
+          "Food bloggers",
+          "Serious home cooks"
         ],
         courseContent: [
-          'Sponge baking',
-          'Theory class',
-          'Cupcake and muffin class',
-          'Home made cake premix class',
-          'Brownies',
-          'Travel cakes',
-          'Cheesecakes',
-          'Dessert making class',
-          'Art of pastries',
-          'Cakesicles and popsicles',
-          'Chocolate garnishing',
-          'Fondant art',
-          'Icing cakes',
-          'Trendy cakes',
-          'Branding, marketing strategy and product photography'
+          "Advanced knife skills",
+          "Global cuisine masterclass",
+          "Professional kitchen management",
+          "Menu development",
+          "Food costing and portion control",
+          "Garde manger techniques",
+          "Advanced sauce making",
+          "Meat fabrication",
+          "Seafood preparation",
+          "Dietary restriction cooking",
+          "Food styling",
+          "Restaurant operations",
+          "Food photography",
+          "Business and marketing strategies",
+          "Health and safety certification"
         ],
         benefits: [
-          'Skill development program',
-          'How to use bakery waste in an effective manner',
-          'Easily start their own business',
-          'Making bakery profitable',
-          'Project based class: you\'ll be given regular work'
+          "Professional skill development",
+          "Kitchen management training",
+          "Business startup guidance",
+          "Restaurant profitability techniques",
+          "Hands-on project work"
         ]
       },
-      'Diploma baking course': {
-        tagline: 'From Aspiring Baker to Professional Pastry Chef',
-        duration: '6 Months',
+      "Culinary diploma course": {
+        tagline: "From Home Cook to Professional Chef",
+        duration: "6 Months",
         whoShouldEnroll: [
-          'Aspiring pastry chefs',
-          'Home bakers looking to go professional',
-          'Bakery business owners',
-          'Advanced skill seekers',
-          'Passionate bakers aiming to start a bakery business',
-          'Healthy and artisan baking enthusiasts'
+          "Future professional chefs",
+          "Restaurant entrepreneurs",
+          "Catering business owners",
+          "Advanced cooking enthusiasts",
+          "Food service managers",
+          "Specialty cuisine experts"
         ],
         courseContent: [
-          'Baked desserts like pies and tarts',
-          'Complete fondant cakes and trendy cakes',
-          'Advanced travel cakes, brownies, crownies, and brookies',
-          'Healthy cookies and artisan breads',
-          'Doughnuts, designer breads, and pizzas',
-          'Business strategies and marketing techniques',
-          'Profitability tips for bakeries'
+          "Advanced culinary techniques",
+          "International cuisine specialization",
+          "Modern gastronomy methods",
+          "Restaurant management",
+          "Menu engineering",
+          "Food cost control",
+          "Catering operations"
         ],
         benefits: [
-          'Brownie & cookie premix techniques',
-          'Advanced icing and decorating methods',
-          'Hands-on experience with tools and techniques',
-          'Skill development program',
-          'How to use bakery waste in an effective manner',
-          'Easily start their own business',
-          'Making bakery profitable',
-          'Project based class: you\'ll be given regular work'
+          "Advanced cooking techniques",
+          "Restaurant management training",
+          "Professional kitchen experience",
+          "Business development skills",
+          "Waste management techniques",
+          "Business startup support",
+          "Profitability strategies",
+          "Real-world project experience"
         ]
-      },
+      }
     }
-  },
-  {
-    name: 'Cooking',
-    description: 'Master the art of baking with hands-on experience in our state-of-the-art kitchen facilities. Learn from expert pastry chefs who will guide you through everything from basic bread making to advanced pastry techniques.',
-    theory: [
-      'Difference between Baking powder, soda and eno',
-      'Why cake sponges crack on top and how to avoid that',
-      'How to prevent the crust from the top and bake perfect sponge',
-      'Why cake sunk/dipped in the middle',
-      'How to use different instruments for baking like OTG microwave and gas',
-      'Knowledge about ingredients, buying and storing'
-    ],
-    image: 'https://plus.unsplash.com/premium_photo-1683707120403-9add00a6140e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    programDetails: {
-      'Beginner friendly training program': {
-        tagline: 'Start baking, start earning',
-        duration: '15 Days',
-        whoShouldEnroll: [
-          'Beginners',
-          'Skill upgraders',
-          'Passionate bakers',
-          'Aspiring bakery owners',
-          'Side income seekers',
-          'Want to bake good cakes for family and friends'
-        ],
-        courseContent: [
-          'Learning batter from scratch',
-          'Cake baking like professional bakers',
-          'Perfect whipping cream making',
-          'Icing techniques',
-          'Different theme garnishing',
-          'Different popular flavors of cakes',
-          'Basic chocolate garnishing',
-          'Topper creation',
-          'Nozzle and tool work',
-          'Chocolate cream making'
-        ],
-        benefits: [
-          'Make and take: Make your cakes in class, and make your family members happy by taking them home',
-          'No prior Baking/Cooking knowledge required!!',
-          'Learn Baking of Bakery Cakes Sponges From Scratch (Not only with ready cake mix)'
-        ]
-      },
-      'Baking business course': {
-        tagline: 'Bake Like a Pro, Earn with Confidence!',
-        duration: '3 Months',
-        whoShouldEnroll: [
-          'Beginners',
-          'Skill upgraders',
-          'Passionate bakers',
-          'Aspiring bakery owners',
-          'Side income seekers',
-          'Want to bake good cakes for family and friends'
-        ],
-        courseContent: [
-          'Sponge baking',
-          'Theory class',
-          'Cupcake and muffin class',
-          'Home made cake premix class',
-          'Brownies',
-          'Travel cakes',
-          'Cheesecakes',
-          'Dessert making class',
-          'Art of pastries',
-          'Cakesicles and popsicles',
-          'Chocolate garnishing',
-          'Fondant art',
-          'Icing cakes',
-          'Trendy cakes',
-          'Branding, marketing strategy and product photography'
-        ],
-        benefits: [
-          'Skill development program',
-          'How to use bakery waste in an effective manner',
-          'Easily start their own business',
-          'Making bakery profitable',
-          'Project based class: you\'ll be given regular work'
-        ]
-      },
-      'Diploma baking course': {
-        tagline: 'From Aspiring Baker to Professional Pastry Chef',
-        duration: '6 Months',
-        whoShouldEnroll: [
-          'Aspiring pastry chefs',
-          'Home bakers looking to go professional',
-          'Bakery business owners',
-          'Advanced skill seekers',
-          'Passionate bakers aiming to start a bakery business',
-          'Healthy and artisan baking enthusiasts'
-        ],
-        courseContent: [
-          'Baked desserts like pies and tarts',
-          'Complete fondant cakes and trendy cakes',
-          'Advanced travel cakes, brownies, crownies, and brookies',
-          'Healthy cookies and artisan breads',
-          'Doughnuts, designer breads, and pizzas',
-          'Business strategies and marketing techniques',
-          'Profitability tips for bakeries'
-        ],
-        benefits: [
-          'Brownie & cookie premix techniques',
-          'Advanced icing and decorating methods',
-          'Hands-on experience with tools and techniques',
-          'Skill development program',
-          'How to use bakery waste in an effective manner',
-          'Easily start their own business',
-          'Making bakery profitable',
-          'Project based class: you\'ll be given regular work'
-        ]
-      },
-    }
-  },
+  }
+  
 ];
 
 export default function TrainingGridWithModal() {
@@ -446,7 +336,7 @@ export default function TrainingGridWithModal() {
                   {program.theory && (
                     <div className="mt-4">
                       <h3 className="text-base font-semibold mb-2 text-orange-600">
-                        Know the Theory Behind Baking
+                        {`Know the Theory Behind ${program.name}`}
                       </h3>
                       <div className="grid gap-1.5">
                         {program.theory.map((item, idx) => (
@@ -491,7 +381,7 @@ export default function TrainingGridWithModal() {
                         : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                     }`}
                   >
-                    {`${duration} (${selectedProgram.programDetails[duration].duration})`}
+                    {`${duration}`}
                   </button>
                 ))}
               </div>
@@ -501,9 +391,6 @@ export default function TrainingGridWithModal() {
             <div className="flex-1 overflow-y-auto p-6">
               {selectedDuration && (
                 <div>
-                  <h3 className="text-lg font-bold mb-2">
-                    {selectedDuration}
-                  </h3>
                   <p className="text-sm text-orange-600 mb-2">
                     {selectedProgram.programDetails[selectedDuration].tagline}
                   </p>
@@ -530,13 +417,16 @@ export default function TrainingGridWithModal() {
                   <h4 className="text-sm font-semibold mb-2 text-gray-800">
                     Benefits:
                   </h4>
-                  <ul className="list-disc ml-5 text-sm text-gray-600">
+                  <ul className="list-disc ml-5 text-sm text-gray-600 mb-4">
                     {selectedProgram.programDetails[selectedDuration].benefits.map(
                       (item, idx) => (
                         <li key={idx}>{item}</li>
                       )
                     )}
                   </ul>
+                  <h4 className="text-sm font-semibold mb-2 text-gray-800">
+                    Duration: {selectedProgram.programDetails[selectedDuration].duration}
+                  </h4>
                 </div>
               )}
             </div>
